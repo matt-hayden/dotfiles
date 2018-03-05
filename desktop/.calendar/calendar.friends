@@ -1,0 +1,14 @@
+
+#ifndef _calendar_friends_
+#define _calendar_friends_
+
+#define BIRTHDAY(_) _'s birthday
+
+BIRTHDAY(May 10	Lil Vee)
+BIRTHDAY(Jul 17	Sarah Fallik)
+BIRTHDAY(Jul 17	Tara Cohen)
+BIRTHDAY(Jul 19	Chris Alvarado)
+BIRTHDAY(Jul 22	Mary Barrong)
+
+#undef BIRTHDAY
+#endif

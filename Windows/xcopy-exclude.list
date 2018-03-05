@@ -1,0 +1,16 @@
+\cygwin\tmp
+\$RECYCLE.BIN\
+\RECYCLER\
+\System Volume Information\
+\TEMP\
+\TMP\
+\WINDOWS\TEMP
+\pagefile.sys
+\hiberfil.sys
+.del-
+.delme
+.tmp
+PUTTY.RND
+$OVRSPN$.INF
+Autorun.INF
+~uTorrentPartFile

@@ -1,0 +1,7 @@
+
+#include "calendar.celeb"
+#include "calendar.friends"
+#include "calendar.space"
+#include "calendar.trivia"
+
+#include <calendar.usholiday>

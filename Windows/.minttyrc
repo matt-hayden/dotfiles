@@ -1,0 +1,71 @@
+# Usage: mintty [OPTION]... [ PROGRAM [ARG]... | - ]
+# Start a new terminal session running the specified program or the user's 
+# shell. If a dash is given instead of a program, invoke the shell as a 
+# login shell. 
+
+# Options:
+# -c, --config FILE     Load specified config file
+# -e, --exec            Treat remaining arguments as the command to execute
+# -h, --hold never|start|error|always  Keep window open after command finishes
+# -i, --icon FILE[,IX]  Load window icon from file, optionally with index
+# -l, --log FILE        Log output to file
+# -o, --option OPT=VAL  Override config file option with given value
+# -p, --position X,Y    Open window at specified coordinates
+# -s, --size COLS,ROWS  Set screen size in characters
+# -t, --title TITLE     Set window title (default: the invoked command)
+# -u, --utmp            Create a utmp entry
+# -w, --window normal|min|max|full|hide  Set initial window state
+# --class CLASS     Set window class name (default: mintty)
+# -H, --help            Display help and exit
+# -V, --version         Print version information and exit
+
+# The default foreground, background and cursor colours can be changed in 
+# the options dialog, or by specifying the ForegroundColour, 
+# BackgroundColour and CursorColour settings in the configuration file or 
+# on the command line. 
+
+# However, they can also be changed from within the terminal using the 
+# xterm control sequences for this purpose, for example: 
+
+# echo -ne '\e]10;#000000\a'  # Black foreground
+# echo -ne '\e]11;#C0C0C0\a'  # Light gray background
+# echo -ne '\e]12;#00FF00\a'  # Green cursor
+
+# In mintty, the RGB colour values can also be specified using a 
+# comma-separated decimal notation, for example 255,0,0 instead of #FF0000 
+# for red. X11 colour names are not currently supported though. 
+
+# The 16 ANSI colours can be set in the configuration file or on the 
+# command line using settings such as Blue or BoldMagenta. These are 
+# documented in the configuration section of the manual. They can also be 
+# changed using xterm control sequences. Here they are with their default 
+# values: 
+
+# echo -ne '\e]4;0;#000000\a'   # black
+# echo -ne '\e]4;1;#BF0000\a'   # red
+# echo -ne '\e]4;2;#00BF00\a'   # green
+# echo -ne '\e]4;3;#BFBF00\a'   # yellow
+# echo -ne '\e]4;4;#0000BF\a'   # blue
+# echo -ne '\e]4;5;#BF00BF\a'   # magenta
+# echo -ne '\e]4;6;#00BFBF\a'   # cyan
+# echo -ne '\e]4;7;#BFBFBF\a'   # white (light grey really)
+# echo -ne '\e]4;8;#404040\a'   # bold black (i.e. dark grey)
+# echo -ne '\e]4;9;#FF4040\a'   # bold red
+# echo -ne '\e]4;10;#40FF40\a'  # bold green
+# echo -ne '\e]4;11;#FFFF40\a'  # bold yellow
+# echo -ne '\e]4;12;#6060FF\a'  # bold blue
+# echo -ne '\e]4;13;#FF40FF\a'  # bold magenta
+# echo -ne '\e]4;14;#40FFFF\a'  # bold cyan
+# echo -ne '\e]4;15;#FFFFFF\a'  # bold white
+
+ScrollMod=off
+Term=xterm-256color
+
+BoldAsFont=no
+CursorType=block
+Font=Source Code Pro
+FontHeight=11
+Columns=103
+Rows=30
+FontIsBold=no
+

@@ -1,0 +1,16 @@
+
+import argparse
+#import shlex # if any of your arguments are quoted shell commands, use shlex.split
+
+def get_argparser(*args, **kwargs):
+	ap = argparse.ArgumentParser(description='')
+	newarg = ap.add_mutually_exclusive_group().add_argument
+	newarg('--quiet', '-q', action='store_const', dest='logging_level', const=logging.ERROR)
+	newarg('--verbose', '-v', action='store_const', dest='logging_level', const=logging.INFO)
+	newarg = ap.add_argument_group('general options').add_argument
+	newarg('files', nargs='*', type=argparse.FileType('r'), default=[sys.stdin],
+					help='files to parse, or "-" for standard input')
+	return ap
+
+args = get_argparser().parse_args()
+

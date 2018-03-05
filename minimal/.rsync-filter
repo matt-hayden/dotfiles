@@ -1,0 +1,74 @@
++ **.rsync-filter
+
+## Backups
+-,s *.bak
+-,s *~
+
+## Linux droppings
+-,p .directory
+## in $HOME
+- .adobe/Flash_Player
+-,p .bash_history
+-,p .cache
+- .dropbox
+- .dropbox-dist
+-,s .ecryptfs
+-,s .emscripten_cache
+-,p .history
++ .jrnl_config
+-,p .lesshst
+- .macromedia
++ .password-store
+-,p .python_history
+-,s .rhosts
+- .rnd
+-,s .shosts
+- .steam
+- .steampath
+- .steampid
++ .vimrc
+
+## Windows(TM) droppings
+-,p $RECYCLE.BIN/
+-,p $Recycle.Bin/
+-,p RECYCLER/
+-,p System Volume Information/
+
+## cached binaries
+-,p .DS_Store
+-,p **.go
+-,p **.py[co]
+-,p __pycache__
+-,p **.stversions
+-,p Thumbs.[Dd][Bb]
+-,p .thumbnails
+-,p ZbThumbnail.info
+
+## expendable files
+-,p core
+-,p **.lock
+-,p **.temp-*
+-,p **.tmp
+-,p temp
+-,p tmp
+-,p **/SingletonCookie
+-,p **/SingletonLock
+-,p .Trash*/
+
+-,s package-lock.json
+-,s node_modules/
+
+## prevent .git version control from transmitting
+-,s .git/
+## note that the following are small, and can be used to regenerate a clone
++ .gitconfig
++ .git/config
++ .gitmodules
+
+-,s .dotfiles/
+
+-,s Downloads/
+-,p delme/
+
+- scrapbook-export
+- workbench

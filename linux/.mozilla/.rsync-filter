@@ -1,0 +1,4 @@
++ .rsync-filter
++ profiles.ini
++ **/places.sqlite
+- *

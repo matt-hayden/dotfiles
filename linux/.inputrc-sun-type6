@@ -1,0 +1,19 @@
+### .inputrc-sun-type6
+# Extra keys found on the friggin awesome USB Sun Type 6 XT-styler
+#		Keysym	ckey	xkey
+# 02	Blank = SunProps	128	138
+# 03	Cancel = Stop	129	136
+# 11	Find		144
+# 01	Help	138	146
+# 04	Redo = Again		137
+# 07	SunFront		140
+# 09	SunOpen		142
+# 05	SunProps		138
+# 06	Undo		139
+# 08	XF86Copy		141
+# 12	XF86Cut	137	145
+# 10	XF86Paste		143
+# Volume up, down, mute work as other keyboards
+#		XF86PowerOff		124
+
+

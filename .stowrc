@@ -1,0 +1,6 @@
+--ignore=~
+--ignore=[.]git
+--ignore=[.]gitignore
+--ignore=[.]gitmodules
+--ignore=[.]md
+--ignore=README

@@ -1,0 +1,34 @@
+Usage: JetComp
+	-src:{database name}
+	-dest:{database name}
+	-y{system database location}
+	-u{user name} (default=admin)
+	-p{user password}
+	-w{database password}
+	-x   Encrypt Destination Database
+	-t   Use Database Locale when copying data for text columns
+	-v4  Destination db is 4.x format (default)
+	-v3  Destination db is 3.x format
+	-L0  Db locale - None Use current language (default)
+	-L1  Db locale - English, German, French, and Portuguese
+	-L2  Db locale - Italian, and Modern Spanish 
+	-L3  Db locale - Arabic
+	-L4  Db locale - Simplified Chinese
+	-L5  Db locale - Traditional Chinese
+	-L6  Db locale - Russian
+	-L7  Db locale - Czech
+	-L8  Db locale - Dutch
+	-L9  Db locale - Greek
+	-L10 Db locale - Hebrew
+	-L11 Db locale - Hungarian
+	-L12 Db locale - Icelandic
+	-L13 Db locale - Japanese 
+	-L14 Db locale - Korean
+	-L15 Db locale - Norwegian and Danish
+	-L16 Db locale - Polish
+	-L17 Db locale - Slovenian
+	-L18 Db locale - Traditional Spanish
+	-L19 Db locale - Swedish and Finnish
+	-L20 Db locale - Thai
+	-L21 Db locale - Turkish
+	If no options are passed, GUI front end will start.

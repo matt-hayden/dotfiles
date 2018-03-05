@@ -1,0 +1,101 @@
+!!! Note:
+!!! Do not set geometries for windows like this:
+! XTerm*geometry:	100x100
+!!! This sets the number of pixels as well as the lines and columns
+!!! Do this:
+! XTerm*VT100.geometry:	100x100
+
+*cursorBlink:		True
+*jumpScroll:		False
+*loginShell:		True
+*marginBell:		True
+*nMarginBell:		2
+*popOnBell:		True
+*saveLines:		4095
+*visualBellLine:	True
+*visualBell:		True
+
+
+*VT100.translations:	#override \n\
+  Meta<Key>F1: popup-menu(m) \n\
+  Meta<Key>F2: popup-menu(v) \n\
+  Meta<Key>F3: popup-menu(f) \n\
+  Meta<Key>F4: popup-menu(t) \n\
+  Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+  Shift <Btn2Up>: exec-formatted("sensible-browser '%t'", PRIMARY) \n\
+  Shift <Btn3Up>: exec-formatted("pcmanfm '%t'", PRIMARY)
+
+
+Xterm*foreground:		grey90
+Xterm*background:		UbuntuBurgundy
+URxvt*foreground:		grey90
+URxvt*background:		UbuntuBurgundy
+
+URxvt.font:			xft:DejaVu Sans Mono
+!URxvt.font:			-*-fixed-medium-*-*-*-20-*-*-*-*-*-*-*
+!URxvt.boldFont:		-*-fixed-bold-*-*-*-18-*-*-*-*-*-*-*
+!URxvt.font:	xft:UbuntuMonoDerivativePowerline Nerd Font,xft:InconsolataForPowerline Nerd Font,xft:FantasqueSansMono Nerd Font,xft:Iosevka Nerd Font
+!URxvt.scrollstyle:		plain
+URxvt.scrollBar_right:		True
+!URxvt.scrollBar_floating:	True
+URxvt.scrollTtyKeypress:	True
+URxvt.secondaryWheel:		True
+
+URxvt.fading:			25
+URxvt.scrollColor:		UbuntuGrey
+URxvt.troughColor:		UbuntuBurgundy
+URxvt.borderColor:		UbuntuGrey
+
+!URxvt.internalBorder:		0
+!URxvt.externalBorder:		0
+URxvt.pointerBlank:		True
+!URxvt.pointerColor:		red
+!URxvt.pointerColor2:		black
+URxvt.iconFile:			/usr/share/pixmaps/urxvt_48x48.xpm
+
+!XTerm*termName:		xterm-256color
+
+XTerm*faceSize:			12
+
+!!! Default on Debian (in fonts-dejavu package):
+XTerm*faceName:			DejaVu Sans Mono:antialias=true
+
+!XTerm*faceName:		Deja Vu Sans Mono Book:antialias=true
+!XTerm*faceName:		FuraCode Nerd Font
+!XTerm*faceName:		Iosevka Nerd Font
+!XTerm*faceName:		MesloLGS Nerd Font:style=Medium
+!XTerm*faceName:		SauceCodePro Nerd Font:style=Medium
+!XTerm*faceName:		SauceCodePro Nerd Font:style=Semibold
+!XTerm*faceName:		UbuntuMonoDerivativePowerline Nerd Font
+XTerm*VT100.faceName:		monospace
+
+XTerm*dynamicColors:		True
+XTerm*showBlinkAsBold:		True
+XTerm*mainMenu*foreground:	grey90
+XTerm*vtMenu*foreground:	grey90
+XTerm*fontMenu*foreground:	grey90
+XTerm*tekMenu*foreground:	grey90
+XTerm*mainMenu.background:	UbuntuBurgundy
+XTerm*vtMenu.background:	UbuntuBurgundy
+XTerm*fontMenu.background:	UbuntuBurgundy
+XTerm*tekMenu.background:	UbuntuBurgundy
+
+!XTerm*utf8:			1
+XTerm*utf8:			3
+XTerm*utf8Title:		True
+!!! Not sure if this is required:
+!XTerm*renderFont:		true
+
+!XTerm*eightBitInput:		True
+XTerm*scrollKey:		true
+XTerm*scrollTtyOutput:		false
+XTerm*scrollBar:		true
+XTerm*rightScrollBar:		true
+XTerm*multiScroll:		true
+XTerm*toolBar:			true
+
+XTerm.printerCommand:		xterm -name PrtSc -e sh -c 'less -R <&3' 3<&0
+XTerm.iconHint:			/usr/share/pixmaps/xterm-color_48x48
+XTerm.zIconBeep:		50
+
