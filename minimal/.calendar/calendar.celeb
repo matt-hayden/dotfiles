@@ -1,0 +1,28 @@
+
+#ifndef _calendar_celeb_
+#define _calendar_celeb_
+
+#include <calendar.birthday>
+
+#define BIRTHDAY(_) _ is born
+
+BIRTHDAY(Apr 1	Gil Scott Heron)
+BIRTHDAY(Apr 1	Lon Cheney)
+
+BIRTHDAY(May 10	Bono)
+
+BIRTHDAY(Jul 18	Hunter S. Thompson)
+BIRTHDAY(Jul 18	Nelson Mandela)
+BIRTHDAY(Jul 20	Alexander the Great)
+BIRTHDAY(Jul 23	Haile Selassie)
+BIRTHDAY(Jul 27	Joseph Kittinger)
+BIRTHDAY(Jul 29	Danger Mouse)
+BIRTHDAY(Jul 30	Henry Ford)
+
+BIRTHDAY(Aug 1	Caesar Augustus)
+BIRTHDAY(Aug 1	Otto Toeplitz)
+BIRTHDAY(Aug 2	Oskar Anderson)
+BIRTHDAY(Aug 5	Niels Henrik Abel)
+
+#undef BIRTHDAY
+#endif

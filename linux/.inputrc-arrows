@@ -1,0 +1,73 @@
+### .inputrc-arrows
+
+### http://www.gnu.org/software/bash/manual/html_node/Sample-Init-File.html
+# Arrow keys in keypad mode
+#
+#"\M-OD":        backward-char
+#"\M-OC":        forward-char
+#"\M-OA":        previous-history
+#"\M-OB":        next-history
+#
+# Arrow keys in ANSI mode
+#
+#"\M-[D":        backward-char
+#"\M-[C":        forward-char
+#"\M-[A":        previous-history
+#"\M-[B":        next-history
+#
+# Arrow keys in 8 bit keypad mode
+#
+#"\M-\C-OD":       backward-char
+#"\M-\C-OC":       forward-char
+#"\M-\C-OA":       previous-history
+#"\M-\C-OB":       next-history
+#
+# Arrow keys in 8 bit ANSI mode
+#
+#"\M-\C-[D":       backward-char
+#"\M-\C-[C":       forward-char
+#"\M-\C-[A":       previous-history
+#"\M-\C-[B":       next-history
+
+# mappings for "page up" and "page down" for history searching
+#"\e[5~": beginning-of-history
+#"\e[6~": end-of-history
+# "page up" and "page down" search the history
+#"\e[5~": history-search-backward
+#"\e[6~": history-search-forward
+
+# mappings for Ctrl-left-arrow and Ctrl-right-arrow for word moving
+#"\e[1;5C":	forward-word
+#"\e[1;5D":	backward-word
+#"\e[5C":	forward-word
+#"\e[5D":	backward-word
+#"\e\e[C":	forward-word
+#"\e\e[D":	backward-word
+
+# alt-arrows
+"\e[1;9D":	backward-word
+"\e[1;9C":	forward-word
+"\e[1;9A":	history-search-backward
+"\e[1;9BC":	history-search-forward
+
+# for xterm
+# Home:
+"\eOH": beginning-of-line
+# End:
+"\eOF": end-of-line
+
+# for Konsole
+# Home:
+"\e[H": beginning-of-line
+# End:
+"\e[F": end-of-line
+
+
+# from http://code.google.com/p/mintty/wiki/Tips
+
+# Ctrl+Backspace/Delete to delete whole words
+"\e[3;5~": kill-word
+"\C-_": backward-kill-word
+
+# Alt-Backspace for undo
+"\e\d": undo

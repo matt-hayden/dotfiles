@@ -1,0 +1,6 @@
+--ignore=~
+--ignore=[.]git
+--ignore=[.]gitconfig
+--ignore=[.]gitignore
+--ignore=[.]gitmodules
+--ignore=[.]md

@@ -1,0 +1,43 @@
+### .inputrc
+# Include system wide settings which are ignored
+# by default if one has their own .inputrc
+$include /etc/inputrc
+
+#set editing-mode vi-insert
+
+$if Bash
+	# Alt-L pipes a command to LESS
+	"\es":"\C-e| ${PAGER-less} \C-m"
+
+	# Alt-S wraps a command in sudo
+	"\es":"\C-a sudo \C-e\C-m"
+	
+	## screen hotkey is Alt-`
+	## This will be caught by screen, but outside of screen it will launch a new
+	## session:
+	"\e`": "screen"
+$endif
+
+set enable-keypad on
+
+# Readline only:
+set bell-style none
+
+set visible-stats on
+set mark-directories on
+#set mark-modified-lines on # messes up terminal
+set mark-symlinked-directories on
+
+# go right to showing multiple options
+set show-all-if-ambiguous on
+# TAB by itself cycles through options
+#"\t": menu-complete
+
+# Control-Z is EOF on Windows, but may be ignored as a special character on
+# some terminals
+# "\C-z": undo
+
+# PuTTY:
+# Control and Shift PgUp and PgDn are bound
+
+$include .inputrc-arrows

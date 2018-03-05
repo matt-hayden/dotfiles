@@ -1,0 +1,73 @@
+### rtorrent.rc
+# see https://github.com/rakshasa/rtorrent/wiki/CONFIG-Template
+
+# Default session directory. Make sure you don't run multiple instance
+# of rtorrent using the same session directory. 
+#session		= ./.config/session/rtorrent
+#session_save	= yes
+# 0.9.6:
+session.path.set = "./.config/session/rtorrent"
+session.save = yes
+
+
+# Logging:
+#   Levels = critical error warn notice info debug
+#   Groups = connection_* dht_* peer_* rpc_* storage_* thread_* tracker_* torrent_*
+log.open_file = "log", "rtorrent.log"
+print = (cat,"Logging to ", "rtorrent.log")
+log.add_output = "info", "log"
+#log.add_output = "tracker_debug", "log"
+
+
+# Watch a directory for new torrents, restart torrents that have been
+# copied back and stop those that have been deleted.
+#
+schedule = tied_directory, 10, 10, start_tied=
+schedule = untied_directory, 10, 10, stop_untied=
+schedule = untied_directory, 10, 10, close_untied=
+schedule = untied_directory, 10, 10, remove_untied=
+
+#schedule = watch_directory,10,10,load_start=./Torrents/.incoming/*.torrent
+# 0.9.6:
+schedule = watch_start,10,10,((load.start,"./Torrents/.incoming/*.torrent"))
+# 0.9.7:
+#directory.watch.added = "./Torrents/.incoming", load.start
+
+# Watch another directory with a different destination. (0.7.7+)
+#
+#schedule = watch_directory_stopped,10,10,load=./Torrents/.incoming-stopped/*.torrent
+# 0.9.6:
+schedule = watch_load,15,10,((load.normal,"./Torrents/.incoming-stopped/*.torrent"))
+# 0.9.7:
+#directory.watch.added = "./Torrents/.incoming-stopped", load.normal
+
+
+# Default directory to save the downloaded torrents.
+#umask = 0644	# fails on 0.9.2
+#directory	= ./Torrents
+# 0.9.6:
+directory.default.set = "./Torrents"
+
+
+### Ratio
+### http://libtorrent.rakshasa.no/wiki/RTorrentRatioHandling
+# Enable the default ratio group.
+ratio.enable=
+
+# Change the limits, the defaults should be sufficient.
+#ratio.min.set=100
+#ratio.max.set=300
+#ratio.upload.set=20M
+
+# When seeding ratio is reached close the torrent
+#
+# 0.9.7:
+#system.method.set = group.seeding.ratio.command, d.close=
+#
+# Changing the command triggered when the ratio is reached.
+#
+# 0.9.7:
+#system.method.set = group.seeding.ratio.command, d.close=, d.erase=
+
+import = ~/.config/rtorrent/global
+

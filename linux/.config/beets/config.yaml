@@ -1,0 +1,23 @@
+directory: ~/Music
+import:
+        move: yes
+        write: no
+        resume: ask
+        quiet_fallback: skip
+        timid: no
+        log: beetslog.txt
+match:
+        preferred:
+                countries: ['US', 'GB|UK']
+                media: ['CD', 'Digital Media|File']
+                original_year: yes
+paths:
+        default: $genre/$original_year/$albumartist/$album%aunique{}/$track $title
+        singelton: $genre/$original_year/$artist/Single/$title
+        comp: Compilations/$original_year/$album%aunique{}/$track $title
+        albumtype:soundtrack: Soundtracks/$original_year/$album%aunique{}/$track $artist $title
+incremental: yes
+ignore: .AppleDouble ._* *~ .DS_Store
+art_filename: albumart
+threaded: yes
+color: yes

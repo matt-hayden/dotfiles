@@ -1,0 +1,26 @@
+[user]
+	email = hayden+git@morp.holo.gy
+	name = Matt Hayden (Valenceo LTD)
+[push]
+	default = matching
+[credential]
+	helper = cache
+
+[alias]
+	wdiff = diff --word-diff=color --unified=1
+[tar "tar.lzma"]
+	command = lzma -c
+[tar "tar.xz"]
+	command = xz --robot -c
+[core]
+	excludesfile = .gitignore_global
+[tar "txz"]
+	command = xz --robot -c
+[difftool "pandoc"]
+	command = pandoc --to=plain
+[difftool "pandoc2markdown"]
+	command = pandoc --to=markdown
+[difftool "pdfpeek"]
+	command = pdfpeek.bash
+[difftool "odt2txt"]
+	command = odt2txt

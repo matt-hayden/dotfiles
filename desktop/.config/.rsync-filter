@@ -1,0 +1,9 @@
+- **/cache
+- **/tmp
+- chromium/*/Extensions
+- chromium/*/Local Storage
+- chromium/**/CacheStorage
+- pulse/
+- session/
+- smplayer/
+- umplayer/

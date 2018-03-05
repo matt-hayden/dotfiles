@@ -1,0 +1,17 @@
+#ifndef _calendar_trivia_
+#define _calendar_trivia_
+
+#include <calendar.computer>
+#include <calendar.history>
+#include <calendar.music>
+
+
+Jul 24	Supreme Court unanimously rules that President Richard Nixon did not have the authority to withhold subpoenaed White House tapes, 1974
+Jul 25	Telegraph age begins alongside the Euston-Camden railway, England, 1837
+Jul 28	The 14th Amendment to the United States Constitution is certified, establishing African American citizenship and guaranteeing due process of law.
+Jul 31	US Patent #1 is issued for a method of producing potassium carbonate
+
+Aug 1	Chinese cultural revoution begins, 1966
+Aug 2	Philip II of Macedon unifies Greece via battle, leading to the Hellenic League against Persia, 337 BCE
+
+#endif

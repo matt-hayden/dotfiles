@@ -1,0 +1,53 @@
+#! /usr/bin/env bash
+### See https://superuser.com/questions/117841/get-colors-in-less-command
+
+for arg
+do
+	### custom parser for nearly-binary data
+	ext="${arg##*.}"
+	case "$ext" in
+		7z) 7z l "$arg" ;;
+		b64|base64) base64 -d "$arg" | od -c ;;
+		## note that hexdump -C is better than hexdump
+		asc|b64|base64) b64.py -e 'xxd -a -g 1' "$arg" ;;
+		cpio) cpio -tv -F "$arg" ;;
+		crt|pem) openssl asn1parse -in "$arg" ;;
+		db) sqlite3 "$arg" .tables ;;
+		deb) dpkg-deb -c "$arg" ;;
+		iso) isoinfo -l "$arg" ;;
+		rar) unrar l "$arg" ;;
+		rpm) rpm2cpio "$arg" | cpio -tv ;;
+		tar|tgz|tbz2|txz) tar --list -v -af "$arg" ;;
+		ttf|otf|pfb) fc-scan "$arg" ;;
+		zip) zipinfo -mz "$arg" ;;
+		*) lexer=$(pygmentize -N "$arg")
+			case $lexer in
+				text)
+### Open a file to try and winch out some format
+shebang=$(sed '1q' "$1")
+case $shebang in
+	\#!*sh*)	lexer=sh ;;
+	\#!*perl*)	lexer=perl ;;
+	\#!*python*)	lexer=python ;;
+	*) case "$arg" in
+		bash*|.aliases|.bash*|.env|.profile|.shrc|.shinit)	lexer=sh ;;
+		csh.*|.*cshrc|.login|.logout)	lexer=csh ;;
+		.gitconfig|.gitmodules|config)	lexer=ini ;;
+		httpd.conf)	lexer=apache ;;
+		*keymap*)	lexer=ini ;;
+		openssl.cnf)	lexer=ini ;;
+		*rtorrent.rc*)	lexer=ini ;;
+		*) exit 1 ;;
+	esac
+	;;
+esac
+;;
+###
+			esac
+			case $lexer in
+				text) exit 1 ;;
+			esac
+			pygmentize -f 256 -l "$lexer" "$arg"
+			;;
+	esac
+done

@@ -1,0 +1,6 @@
+-,p share/gvfs-metadata
+-,p share/RecentDocuments
+- share/Steam
+-,p share/Trash
+- share/keyrings/*.keyring
+- share/keyrings/*.keystore

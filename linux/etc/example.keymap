@@ -1,0 +1,21 @@
+### .keymap
+### man keymaps for format
+
+### Only one hotkey:
+# keycode 127 = Last_Console
+
+### Two hotkeys:
+# keycode 125 = Last_Console
+# keycode 127 = Console_7
+
+### Three hotkeys:
+# include "/lib/kbd/keymaps/i386/include/windowskeys.map.gz"
+
+### Multimedia keys on Sun Type 6
+# keycode 113 = F100
+# keycode 114 = F101
+# keycode 115 = F102
+# keycode 116 = F103
+# string F100 = "amixer set Master toggle"
+# string F101 = "amixer -c 0 set Master 5+ unmute"
+# string F102 = "amixer -c 0 set Master 5- unmute"
