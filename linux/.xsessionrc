@@ -4,8 +4,8 @@
 TMPDIR="$(mktemp -d -t xsession.XXXXXXXX)"
 export TMPDIR
 
-[ -x etc/fix_display.bash ] && etc/fix_display.bash
-[ -x etc/fix_power_button.bash ] && etc/fix_power_button.bash
+#[ -x etc/fix_display.bash ] && etc/fix_display.bash
+#[ -x etc/fix_power_button.bash ] && etc/fix_power_button.bash
 
 ## This doesn't work in Ubuntu 16+
 [ -s "$HOME/.Xmodmap" ] && xmodmap "$HOME/.Xmodmap"
