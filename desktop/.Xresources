@@ -1,6 +1,6 @@
 
-#define ReaderForeground	grey95
-#define ReaderBackground	grey05
+#define ReaderForeground	#0a0008
+#define ReaderBackground	grey95
 #define UbuntuGrey	grey30
 #define UbuntuBurgundy	#300A24
 
@@ -13,6 +13,8 @@ Xman.manualBrowser.geometry:	928x1028
 Xman.help.geometry:		928x1028
 
 
+htop*foreground:	grey90
+htop*background:	UbuntuBurgundy
 htop.font:		-*-fixed-medium-*-*-*-18-*-*-*-*-*-*-*
 
 less*foreground:	grey90
@@ -20,10 +22,11 @@ less*background:	UbuntuBurgundy
 less*saveLines:		120
 less*scrollBar:		False
 
-man*foreground:		ReaderForeground
-man*background:		ReaderBackground
-man.fading:		0
-man*scrollBar:		False
+manpager*title:		man
+manpager*foreground:	ReaderForeground
+manpager*background:	ReaderBackground
+manpager.fading:	0
+manpager*scrollBar:	False
 
 pandoc.foreground:	ReaderForeground
 pandoc.background:	ReaderBackground

@@ -8,6 +8,9 @@ BASH_LOGFILE=${TMPDIR-/tmp}/$$.log
 # interactive shells load .bashrc, yet certain output from .bashrc causes, e.g. a
 # bzr connection, to bomb.
 
+# root and system leave here
+[[ 999 -lt $(id -u) ]] || return
+
 source $HOME/etc/shell-functions.bash
 
 
@@ -15,13 +18,6 @@ source $HOME/etc/shell-functions.bash
 #	env > ~/.env
 # Override aliases with:
 #	alias -p > ~/.aliases
-
-
-# root and system leave here
-[[ 999 -lt $(id -u) ]] || return
-
-
-# New environment
 if [[ "$BASH_ENV" ]] || [[ -e ~/.env ]]
 then
   [[ "$BASH_ENV" ]] || BASH_ENV=~/.env
@@ -30,6 +26,7 @@ then
 else
   source ~/etc/shrc
 fi
+
 
 ### INTERACTIVE ###
 # Different ways to test for an interactive shell:

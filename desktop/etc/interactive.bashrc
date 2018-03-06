@@ -1,11 +1,26 @@
 #! /usr/bin/env head
 ### .bash_profile for login shells; pulls in .bashrc
 
+
 ### Test if critical variables are unset. 
 : ${HOME?} ${HOSTNAME?} ${TERM?}
 : ${XTERM=xterm}
 
 source ~/etc/non-interactive.bashrc
+
+# Different ways to test for an interactive shell:
+#[ -z "$PS1" ] && return
+[[ "$PS1" ]] || return
+#[[ $- != *i* ]] && return
+#[[ "${-#*i}" != "$-" ]] || return
+#case $- in
+#  *i*)  ;;
+#  * )  return ;;
+#esac
+
+# bash 4 only:
+#[[ $- =~ i ]] || return
+
 
 shopt -s cmdhist globasciiranges histappend histverify cdspell
 set -o pipefail # exit status is 0 only if all members in the pipe exit 0
@@ -21,13 +36,15 @@ case $LC_ALL in
   *) shopt -s globasciiranges ;;
 esac
 
+## root and system leave here
+[[ 999 -lt `id -u` ]] || return
+
+
 source-parts ~/etc/shell-enabled/*.* &> $BASH_LOGFILE
 ### On Windows: git bash doesn't know USER. Also, you can set OSTYPE=%OS% on Windows.
 #: ${USER=${USERNAME}} ${OSTYPE=`uname -o | tr '[[:upper:]]' '[[:lower:]]'`}
 #export USER OSTYPE
 
-## root and system leave here
-[[ 999 -lt `id -u` ]] || return
 ### How to check for a login shell:
 shopt -q login_shell || return
 
@@ -45,4 +62,4 @@ export HISTCONTROL HISTIGNORE
 [[ -d /media/$USER ]] && CDPATH="${CDPATH-.}:/media/$USER"
 export CDPATH
 
-[[ -e $SSH_AUTH_SOCK ]] || eval `$HOME/bin/ssh-agent.bash -s`
+[[ -e $SSH_AUTH_SOCK ]] && echo "ssh-agent $SSH_AGENT_PID" || eval `$HOME/bin/ssh-agent.bash -s`
