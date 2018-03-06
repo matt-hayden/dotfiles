@@ -1,11 +1,4 @@
 
-htop*foreground:	grey90
-htop*background:	UbuntuBurgundy
-htop*fading:		0
-htop*scrollBar:		False
-htop.perl-ext:
-htop.perl-ext-common:
-
 less*foreground:	grey90
 less*background:	UbuntuBurgundy
 less*saveLines:		120
@@ -27,11 +20,6 @@ pandoc.hold:		True
 pandoc.fading:		0
 pandoc.perl-ext:
 pandoc.perl-ext-common:
-
-tree.scrollWithBuffer:	False
-tree.saveLines:		65535
-tree.perl-ext:
-tree.perl-ext-common:
 
 Xman*horizPane*foreground:	grey90
 Xman*optionMenu*foreground:	grey90

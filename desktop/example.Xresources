@@ -25,13 +25,8 @@ URxvt.geometry:			82x26
 *visualBell:			True
 
 
-htop.font:			-*-fixed-medium-*-*-*-18-*-*-*-*-*-*-*
-htop.geometry:			102x27
-
 pandoc.font:			-*-fixed-medium-*-*-*-18-*-*-*-*-*-*-*
 pandoc.geometry:		102x27
-
-tree.VT100.geometry:		183x26
 
 Xman*directoryFontNormal:	-*-fixed-medium-*-*-*-18-*-*-*-*-*-*-*
 Xman*manualFontNormal:		-*-fixed-medium-*-*-*-20-*-*-*-*-*-*-*

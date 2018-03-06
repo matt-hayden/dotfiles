@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 set -e
 
-: "${FILEIN=$1}" "${VISUAL=vim}"
+: "${FILEIN=$1}" "${VISUAL=sensible-editor}"
 
 history -n || echo exit > "$HISTFILE"
 while [[ -s "$FILEIN" ]]
