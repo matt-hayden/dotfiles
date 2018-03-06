@@ -1,5 +1,13 @@
-#include ".Xresources.xterm"
-#include ".Xresources.wrappers"
+
+#define ReaderForeground	#0a0008
+#define ReaderBackground	grey95
+#define UbuntuGrey		grey30
+#define UbuntuBurgundy		#300A24
+
+#include ".Xresources.d/solarized"
+#include ".Xresources.d/rxvt"
+#include ".Xresources.d/wrappers"
+#include ".Xresources.d/xterm"
 
 ! customized for 1920x1080
 XTerm.VT100.geometry:		91x26

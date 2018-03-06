@@ -5,15 +5,15 @@
 !!! Do this:
 ! XTerm*VT100.geometry:	100x100
 
-*cursorBlink:		True
-*jumpScroll:		False
-*loginShell:		True
-*marginBell:		True
-*nMarginBell:		2
-*popOnBell:		True
-*saveLines:		4095
-*visualBellLine:	True
-*visualBell:		True
+XTerm*cursorBlink:		True
+XTerm*jumpScroll:		False
+XTerm*loginShell:		True
+XTerm*marginBell:		True
+XTerm*nMarginBell:		2
+XTerm*popOnBell:		True
+XTerm*saveLines:		4095
+XTerm*visualBellLine:		True
+XTerm*visualBell:		True
 
 
 *VT100.translations:	#override \n\
@@ -29,40 +29,12 @@
 
 Xterm*foreground:		grey90
 Xterm*background:		UbuntuBurgundy
-URxvt*foreground:		grey90
-URxvt*background:		UbuntuBurgundy
-
-URxvt.font:			xft:DejaVu Sans Mono,xft:UbuntuMonoDerivativePowerline Nerd Font,xft:InconsolataForPowerline Nerd Font,xft:FantasqueSansMono Nerd Font,xft:Iosevka Nerd Font
-
-!URxvt.font:			-*-fixed-medium-*-*-*-20-*-*-*-*-*-*-*
-!URxvt.boldFont:		-*-fixed-bold-*-*-*-18-*-*-*-*-*-*-*
-
-!URxvt.scrollstyle:		plain
-URxvt*thickness:		20
-URxvt.scrollBar_right:		True
-!URxvt.scrollBar_floating:	True
-URxvt.scrollTtyKeypress:	True
-URxvt.secondaryWheel:		True
-
-URxvt.fading:			25
-URxvt.scrollColor:		UbuntuGrey
-URxvt.troughColor:		UbuntuBurgundy
-URxvt.borderColor:		UbuntuBurgundy
-
-!URxvt.internalBorder:		0
-!URxvt.externalBorder:		0
-URxvt.pointerBlank:		True
-!URxvt.pointerColor:		red
-!URxvt.pointerColor2:		black
-URxvt.iconFile:			/usr/share/pixmaps/urxvt_48x48.xpm
 
 !XTerm*termName:		xterm-256color
 
 XTerm*faceSize:			12
-
 !!! Default on Debian (in fonts-dejavu package):
 XTerm*faceName:			DejaVu Sans Mono:antialias=true
-
 !XTerm*faceName:		Deja Vu Sans Mono Book:antialias=true
 !XTerm*faceName:		FuraCode Nerd Font
 !XTerm*faceName:		Iosevka Nerd Font

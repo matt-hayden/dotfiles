@@ -60,6 +60,7 @@ alias less=less.bash
 alias mkvmerge=mkvmerge.bash
 alias mount=mount.bash
 alias ncdu=ncdu.bash
+type play || alias play='canberra-gtk-play --file'
 alias psgrep='pgrep -a'
 alias ptmp='pushd $(mktemp -d)'
 alias rm='rm -i'
