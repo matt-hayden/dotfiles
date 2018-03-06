@@ -44,9 +44,17 @@ else
   alias activate='pkggrep google-cloud-sdk; echo'
 fi
 alias gimp='DISPLAY=:0.0 gimp-2.9'
+if type git
+then
+  for _c in checkout commit fetch push status
+  do
+    alias ${_c}="git ${_c}"
+  done
+fi
 [[ -s ~/etc/greek.txt ]] && alias greek='cat -n ~/etc/greek.txt | grep -i'
 type gzcat || alias gzcat=zcat
 alias head=head.bash
+alias htop="<&- ${XTERM-x-terminal-emulator} -name htop -e htop"
 alias ldgrep='ldconfig -p | grep'
 alias less=less.bash
 [[ $DISPLAY ]] && alias man='COLUMNS=93 MANPAGER=manpager.bash man'
