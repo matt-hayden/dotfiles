@@ -6,16 +6,9 @@
 
 #include ".Xresources.xterm"
 
-! customize these for your screen size:
-tree.VT100.geometry:		183x26
-XTerm.VT100.geometry:		91x26
-Xman.manualBrowser.geometry:	928x1028
-Xman.help.geometry:		928x1028
-
 
 htop*foreground:	grey90
 htop*background:	UbuntuBurgundy
-htop.font:		-*-fixed-medium-*-*-*-18-*-*-*-*-*-*-*
 htop*fading:		0
 htop*scrollBar:		False
 
@@ -34,7 +27,6 @@ pandoc.foreground:	ReaderForeground
 pandoc.background:	ReaderBackground
 pandoc.hold:		True
 pandoc.fading:		0
-pandoc.font:		-*-fixed-medium-*-*-*-18-*-*-*-*-*-*-*
 
 tree.scrollWithBuffer:	False
 tree.saveLines:		65535
@@ -46,8 +38,4 @@ Xman*horizPane*background:	UbuntuGrey
 Xman*optionMenu*background:	UbuntuGrey
 Xman*sectionMenu*background:	UbuntuGrey
 
-Xman*directoryFontNormal:	-*-fixed-medium-*-*-*-18-*-*-*-*-*-*-*
-Xman*manualFontNormal:		-*-fixed-medium-*-*-*-20-*-*-*-*-*-*-*
-Xman*manualFontBold:		-*-fixed-bold-*-*-*-20-*-*-*-*-*-*-*
-Xman*manualFontItalic:		-*-fixed-medium-o-*-*-20-*-*-*-*-*-*-*
 Xman*topBox:			False
