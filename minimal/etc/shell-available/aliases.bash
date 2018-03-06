@@ -49,7 +49,6 @@ type gzcat || alias gzcat=zcat
 alias head=head.bash
 alias ldgrep='ldconfig -p | grep'
 alias less=less.bash
-[[ $DISPLAY ]] && alias man='COLUMNS=93 MANPAGER=manpager.bash man'
 alias mkvmerge=mkvmerge.bash
 alias mount=mount.bash
 alias ncdu=ncdu.bash

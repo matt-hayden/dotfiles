@@ -48,7 +48,7 @@ case $cmd in
     type gcc &&				shell-enable gcc-dev
     [[ $LESSOPEN ]] ||			shell-enable less
     type node &&			shell-enable node
-    type rust &&			shell-enable rust
+    type rustc &&			shell-enable rust
     if [[ ! -s ~/.bash_profile ]]
     then
       ./check_layout.bash || true
