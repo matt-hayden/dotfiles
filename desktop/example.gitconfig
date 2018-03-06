@@ -1,6 +1,14 @@
 [user]
-	email = hayden+git@morp.holo.gy
-	name = Matt Hayden (Valenceo LTD)
+	signingkey = 0x03CEFAEA85DE093A
+	name = Matt Hayden (Valenceo LTD.)
+	email = https://github.com/matt-hayden
+[commit]
+	gpgsign = true
+[alias]
+	git = !exec git
+	sha = rev-parse HEAD
+[gpg]
+	program = gpg2
 [push]
 	default = matching
 [credential]
