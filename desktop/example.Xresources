@@ -13,6 +13,18 @@
 XTerm.VT100.geometry:		91x26
 URxvt.geometry:			82x26
 
+
+*cursorBlink:			True
+*jumpScroll:			False
+*loginShell:			True
+*marginBell:			True
+*nMarginBell:			2
+*popOnBell:			True
+*saveLines:			4095
+*visualBellLine:		True
+*visualBell:			True
+
+
 htop.font:			-*-fixed-medium-*-*-*-18-*-*-*-*-*-*-*
 htop.geometry:			102x27
 

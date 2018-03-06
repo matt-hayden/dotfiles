@@ -54,6 +54,10 @@ export LINES COLUMNS
 : ${HISTIGNORE="bd:[bf]g:disown:exit:fc *:ecryptfs*private:history *:jobs:openssl enc*:pass *:popd:pwd"}
 export HISTCONTROL HISTIGNORE
 
+MANPAGER=manpager.bash
+#export PAGER=less.bash
+export VISUAL=vim
+
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # SYSTEMD_PAGER=
 # export SYSTEMD_PAGER

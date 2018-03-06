@@ -1,25 +1,19 @@
 #! /usr/bin/env bash
 set -e
-
-FILEOUT="/dev/shm/content.$$"
-
-if [[ -d "$HOME/.config/ipipe" ]]
-then
-	HISTFILE="$HOME/.config/ipipe/history"
-else
-	HISTFILE="/dev/shm/ipipe_history"
-fi
-export HISTFILE
-
 export PS5="Enter command"
 
-if [[ "$@" ]]
-then
-	eval "$@" | pv > "$FILEOUT"
-else
-	pv > "$FILEOUT"
-fi
+CONFIG_DIR="$HOME/.config/ipipe"
+export TMPDIR="$(mktemp -d -t ipipe.XXXXXXXX)"
 
-${XTERM-x-terminal-emulator} -e "$HOME/.local/lib/ipipe_term.bash" "$FILEOUT" < /dev/null
-[[ -s "$FILEOUT" ]] && echo "$FILEOUT"
+FILEOUT="$(mktemp -t contents.XXXXXXXX)"
+
+[[ -d "$CONFIG_DIR" ]] && HISTFILE="$CONFIG_DIR/history" || HISTFILE="$(mktemp -t history.XXXXXXXX)"
+export HISTFILE
+
+if [[ "$@" ]]
+then eval "$@" | pv -l
+else             pv -l
+fi > "$FILEOUT"
+
+"$HOME/etc/ipipe_term.bash" "$FILEOUT"
 

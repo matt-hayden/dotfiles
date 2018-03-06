@@ -5,16 +5,6 @@
 !!! Do this:
 ! XTerm*VT100.geometry:	100x100
 
-XTerm*cursorBlink:		True
-XTerm*jumpScroll:		False
-XTerm*loginShell:		True
-XTerm*marginBell:		True
-XTerm*nMarginBell:		2
-XTerm*popOnBell:		True
-XTerm*saveLines:		4095
-XTerm*visualBellLine:		True
-XTerm*visualBell:		True
-
 
 *VT100.translations:	#override \n\
   Meta<Key>F1: popup-menu(m) \n\

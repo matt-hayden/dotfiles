@@ -1,9 +1,8 @@
 #! /usr/bin/env bash
 
-if [[ $DISPLAY ]] && [[ -t 0 ]] && [[ -t 1 ]]
+if [[ -t 0 ]] && [[ -t 1 ]]
 then
-  <&- ${XTERM-x-terminal-emulator} -e \
-    dmesg -H -w "$@" &
+  dmesg -H -w "$@"
 else
-  exec dmesg "$@"
+  dmesg "$@"
 fi

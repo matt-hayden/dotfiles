@@ -54,7 +54,6 @@ fi
 [[ -s ~/etc/greek.txt ]] && alias greek='cat -n ~/etc/greek.txt | grep -i'
 type gzcat || alias gzcat=zcat
 alias head=head.bash
-alias htop="<&- ${XTERM-x-terminal-emulator} -name htop -e htop"
 alias ldgrep='ldconfig -p | grep'
 alias less=less.bash
 alias mkvmerge=mkvmerge.bash
@@ -76,7 +75,7 @@ then
   done
 fi
 alias ta='touch -a'
-alias tail=tail.bash
+alias tail=head.bash
 if type tnef
 then
   alias winmail_dat=tnef

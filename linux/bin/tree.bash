@@ -1,9 +1,8 @@
 #! /usr/bin/env bash
 
-if [[ $DISPLAY ]] && [[ -t 1 ]]
+if [[ -t 1 ]]
 then
-  <&- ${XTERM-x-terminal-emulator} -name tree -e \
-    kwatch.bash tree "$@" &
+  kwatch.bash tree "$@"
 else
-  exec tree "$@"
+  tree "$@"
 fi
