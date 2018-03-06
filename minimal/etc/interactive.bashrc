@@ -4,7 +4,6 @@
 
 ### Test if critical variables are unset. 
 : ${HOME?} ${HOSTNAME?} ${TERM?}
-: ${XTERM=xterm}
 
 source ~/etc/non-interactive.bashrc
 
@@ -63,3 +62,5 @@ export HISTCONTROL HISTIGNORE
 export CDPATH
 
 [[ -e $SSH_AUTH_SOCK ]] && echo "ssh-agent $SSH_AGENT_PID" || eval `$HOME/bin/ssh-agent.bash -s`
+
+# EOF

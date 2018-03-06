@@ -16,6 +16,8 @@ Xman.help.geometry:		928x1028
 htop*foreground:	grey90
 htop*background:	UbuntuBurgundy
 htop.font:		-*-fixed-medium-*-*-*-18-*-*-*-*-*-*-*
+htop*fading:		0
+htop*scrollBar:		False
 
 less*foreground:	grey90
 less*background:	UbuntuBurgundy

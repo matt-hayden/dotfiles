@@ -27,19 +27,4 @@ else
   source ~/etc/shrc
 fi
 
-
-### INTERACTIVE ###
-# Different ways to test for an interactive shell:
-#[ -z "$PS1" ] && return
-[[ "$PS1" ]] || return
-#[[ $- != *i* ]] && return
-#[[ "${-#*i}" != "$-" ]] || return
-#case $- in
-#  *i*)  ;;
-#  * )  return ;;
-#esac
-
-# bash 4 only:
-#[[ $- =~ i ]] || return
-
 # EOF
