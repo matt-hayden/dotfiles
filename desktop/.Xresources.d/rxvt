@@ -1,12 +1,12 @@
 
 #ifdef transparency
 URxvt.depth:			32
-URxvt.fading:			32
-URxvt*foreground:		rgba:fc00/fc00/fc00/ff00
-URxvt*background:		rgba:3000/0A00/2400/ff00
-URxvt*scrollColor:		rgba:0000/0000/0000/6000
-URxvt*troughColor:		rgba:0000/0000/0000/4000
-URxvt*borderColor:		rgba:0000/0000/0000/4000
+URxvt.fading:			25
+URxvt*foreground:		grey90
+URxvt*background:		[90]UbuntuBurgundy
+URxvt.scrollColor:		[50]UbuntuGrey
+URxvt.troughColor:		[25]UbuntuBurgundy
+URxvt.borderColor:		[10]UbuntuBurgundy
 #else
 URxvt*foreground:		grey90
 URxvt*background:		UbuntuBurgundy
