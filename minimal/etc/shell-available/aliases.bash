@@ -46,9 +46,9 @@ fi
 alias gimp='DISPLAY=:0.0 gimp-2.9'
 if type git
 then
-  for _c in checkout commit fetch push status
+  for _c in branch checkout commit fetch merge push
   do
-    alias ${_c}="git ${_c}"
+    type "${_c}" || alias ${_c}="git ${_c}"
   done
 fi
 [[ -s ~/etc/greek.txt ]] && alias greek='cat -n ~/etc/greek.txt | grep -i'

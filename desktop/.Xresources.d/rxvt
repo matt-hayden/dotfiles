@@ -1,10 +1,26 @@
+
+#ifdef transparency
+URxvt.depth:			32
+URxvt.fading:			32
+URxvt*foreground:		rgba:fc00/fc00/fc00/ff00
+URxvt*background:		rgba:3000/0A00/2400/ff00
+URxvt*scrollColor:		rgba:0000/0000/0000/6000
+URxvt*troughColor:		rgba:0000/0000/0000/4000
+URxvt*borderColor:		rgba:0000/0000/0000/4000
+#else
 URxvt*foreground:		grey90
 URxvt*background:		UbuntuBurgundy
+URxvt.scrollColor:		UbuntuGrey
+URxvt.troughColor:		UbuntuBurgundy
+URxvt.borderColor:		UbuntuBurgundy
+#endif
 
+#ifdef truetype
 URxvt.font:			xft:DejaVu Sans Mono,xft:UbuntuMonoDerivativePowerline Nerd Font,xft:InconsolataForPowerline Nerd Font,xft:FantasqueSansMono Nerd Font,xft:Iosevka Nerd Font
-
-!URxvt.font:			-*-fixed-medium-*-*-*-20-*-*-*-*-*-*-*
-!URxvt.boldFont:		-*-fixed-bold-*-*-*-18-*-*-*-*-*-*-*
+#else
+URxvt.font:			-*-fixed-medium-*-*-*-20-*-*-*-*-*-*-*
+URxvt.boldFont:			-*-fixed-bold-*-*-*-18-*-*-*-*-*-*-*
+#endif
 
 !URxvt.scrollstyle:		plain
 URxvt*thickness:		20
@@ -12,11 +28,6 @@ URxvt.scrollBar_right:		True
 !URxvt.scrollBar_floating:	True
 URxvt.scrollTtyKeypress:	True
 URxvt.secondaryWheel:		True
-
-URxvt.fading:			25
-URxvt.scrollColor:		UbuntuGrey
-URxvt.troughColor:		UbuntuBurgundy
-URxvt.borderColor:		UbuntuBurgundy
 
 !URxvt.internalBorder:		0
 !URxvt.externalBorder:		0
@@ -29,7 +40,7 @@ URxvt.iconFile:			/usr/share/pixmaps/urxvt_48x48.xpm
 URxvt.perl-ext-common:		default,matcher,tabbed
 URxvt.url-launcher:		/usr/bin/xdg-open
 URxvt.matcher.button:		1
-! Internal color codes used here
+! Only internal color codes used here, no transparency
 URxvt.tabbed.tabbar-fg:		255
 URxvt.tabbed.tabbar-bg:		237
 URxvt.tabbed.tab-fg:		0

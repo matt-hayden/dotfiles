@@ -1,4 +1,7 @@
 
+#define transparency
+#define truetype
+
 #define ReaderForeground	#0a0008
 #define ReaderBackground	grey95
 #define UbuntuGrey		grey30

@@ -14,7 +14,7 @@
   Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
   Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
   Shift <Btn2Up>: exec-formatted("sensible-browser '%t'", PRIMARY) \n\
-  Shift <Btn3Up>: exec-formatted("pcmanfm '%t'", PRIMARY)
+  Shift <Btn3Up>: exec-formatted("xdg-open '%t'", PRIMARY)
 
 
 Xterm*foreground:		grey90
@@ -22,17 +22,17 @@ Xterm*background:		UbuntuBurgundy
 
 !XTerm*termName:		xterm-256color
 
+#ifdef truetype
 XTerm*faceSize:			12
-!!! Default on Debian (in fonts-dejavu package):
-XTerm*faceName:			DejaVu Sans Mono:antialias=true
-!XTerm*faceName:		Deja Vu Sans Mono Book:antialias=true
+XTerm*faceName:			DejaVu Sans Mono:antialias=True
+!XTerm*faceName:		Deja Vu Sans Mono Book:antialias=True
 !XTerm*faceName:		FuraCode Nerd Font
 !XTerm*faceName:		Iosevka Nerd Font
 !XTerm*faceName:		MesloLGS Nerd Font:style=Medium
 !XTerm*faceName:		SauceCodePro Nerd Font:style=Medium
 !XTerm*faceName:		SauceCodePro Nerd Font:style=Semibold
 !XTerm*faceName:		UbuntuMonoDerivativePowerline Nerd Font
-XTerm*VT100.faceName:		monospace
+#endif
 
 XTerm*dynamicColors:		True
 XTerm*showBlinkAsBold:		True
@@ -49,15 +49,15 @@ XTerm*tekMenu.background:	UbuntuBurgundy
 XTerm*utf8:			3
 XTerm*utf8Title:		True
 !!! Not sure if this is required:
-!XTerm*renderFont:		true
+!XTerm*renderFont:		True
 
 !XTerm*eightBitInput:		True
-XTerm*scrollKey:		true
+XTerm*scrollKey:		True
 XTerm*scrollTtyOutput:		false
-XTerm*scrollBar:		true
-XTerm*rightScrollBar:		true
-XTerm*multiScroll:		true
-XTerm*toolBar:			true
+XTerm*scrollBar:		True
+XTerm*rightScrollBar:		True
+XTerm*multiScroll:		True
+XTerm*toolBar:			True
 
 XTerm.printerCommand:		xterm -name PrtSc -e sh -c 'less -R <&3' 3<&0
 XTerm.iconHint:			/usr/share/pixmaps/xterm-color_48x48
