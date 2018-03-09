@@ -3,10 +3,10 @@
 URxvt.depth:			32
 URxvt.fading:			25
 URxvt*foreground:		grey90
-URxvt*background:		[90]UbuntuBurgundy
-URxvt.scrollColor:		[50]UbuntuGrey
-URxvt.troughColor:		[25]UbuntuBurgundy
-URxvt.borderColor:		[10]UbuntuBurgundy
+URxvt*background:		[95]UbuntuBurgundy
+URxvt.scrollColor:		[32]UbuntuGrey
+URxvt.troughColor:		[16]UbuntuBurgundy
+URxvt.borderColor:		[32]UbuntuGrey
 #else
 URxvt*foreground:		grey90
 URxvt*background:		UbuntuBurgundy
