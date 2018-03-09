@@ -1,10 +1,10 @@
 #! /usr/bin/env bash
-# Only return words 8-10 letters long
-[[ $1 ]] && pattern="$1" || pattern='.\{8,10\}'
+# Only return words 4-8 letters long. This is slightly more than 15 bits of randomness per word on my system.
+[[ $1 ]] && pattern="$1" || pattern='.\{4,8\}'
 
 system-words.bash | if [[ -t 1 ]]
 then
-  grep -x "$pattern" | shuf | column -x | sed G | head.bash
+  grep -x "$pattern" | ushuf.bash -r -n 333 | column -x | sed G | head.bash
 else
-  shuf
+  ushuf.bash -r
 fi
