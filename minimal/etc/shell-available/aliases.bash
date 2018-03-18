@@ -22,6 +22,7 @@ then
   alias pkggrep='dpkg-query -l'
   alias search='apt search'
 fi
+alias blkid="$SUDO blkid"
 alias burn=burn.bash
 alias cdrecord=cdrecord.bash
 alias curl=curl.bash
@@ -56,12 +57,15 @@ type gzcat || alias gzcat=zcat
 alias head=head.bash
 alias ldgrep='ldconfig -p | grep'
 alias less=less.bash
+alias lineargs="xargs -d $'\n'"
 alias mkvmerge=mkvmerge.bash
 alias mount=mount.bash
 alias ncdu=ncdu.bash
 type play || alias play='canberra-gtk-play --file'
 alias psgrep='pgrep -a'
 alias ptmp='pushd $(mktemp -d)'
+alias pycheck='python -m py_compile'
+alias py3check='python3 -m py_compile'
 alias rm='rm -i'
 alias rsync=rsync.bash
 [[ -s ~/etc/russian.txt ]] && alias russian='cat -n ~/etc/russian.txt | grep -i'
@@ -75,6 +79,7 @@ then
   done
 fi
 alias ta='touch -a'
+alias taa='tee -a'
 alias tail=head.bash
 if type tnef
 then

@@ -14,7 +14,7 @@ if !has("gui")
   let g:airline#extensions#tabline#enabled=1
   if 2 < &t_Co
     set hlsearch
-    colorscheme desert
+"    colorscheme desert
     syntax enable
   endif
 endif

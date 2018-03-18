@@ -6,8 +6,9 @@ CACHEDIR="Signature: 8a477f597d28d172789f06886806bc55"
 
 ############################# helpful constants ###############################
 bluray=24411500000	# capacity of Blu-Ray disc, 11919678*2048 - 544
+dashr=4706074624	# capacity of DVD-R disc, 2297888*2048
 plusr=4700372992	# capacity of DVD+R disc, 2295104*2048
-spy=31557600		# seconds per year, there are 31.5 MB/yr at 1 B/s
+spy=31557600		# seconds per year: there are 31.5 TB/yr at 1 MB/s
 
 gib=1073741824
 pi=3.141592653589793

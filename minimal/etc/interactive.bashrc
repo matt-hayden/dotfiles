@@ -51,7 +51,7 @@ shopt -q login_shell || return
 export LINES COLUMNS
 #: ${HISTCONTROL=ignoreboth}
 : ${HISTCONTROL=erasedups:ignorespace}
-: ${HISTIGNORE="bd:[bf]g:disown:exit:fc *:ecryptfs*private:history *:jobs:openssl enc*:pass *:popd:pwd"}
+: ${HISTIGNORE="bd:[bf]g:disown:exit:fc *:ecryptfs*private:gpg*:history *:jobs:openssl enc*:passwd *:pass *:popd:pwd"}
 export HISTCONTROL HISTIGNORE
 
 MANPAGER=manpager.bash
