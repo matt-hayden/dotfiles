@@ -2,7 +2,7 @@
 
 [ $# -eq 0 ] && set -- *
 
-for arg in *
+for arg
 do
 	[ -f "$arg" ] || continue
 	/usr/bin/printf '%q\n' "$arg"
