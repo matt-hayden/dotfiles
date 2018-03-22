@@ -66,8 +66,8 @@ EOF
     ;;
   backup) shift
     cd /
-    [[ -d GcsBox ]] && gcsbox.bash up -n &
-    $RSYNC -rt "$@" $HOME/ Nimble:backup/$HOSTNAME/$HOME &
+    [[ -d GcsBox ]] && gcsbox.bash up
+    $RSYNC -rt "$@" $HOME/ Nimble:backup/$HOSTNAME/$HOME
     ;;
   *) cat << EOF
 Usage:

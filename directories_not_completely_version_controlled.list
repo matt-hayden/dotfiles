@@ -34,4 +34,6 @@ Torrents
 .local/share
 .local/share/keybase
 .local/share/vlc
+.shotwell
+.thumbnails
 .urxvt

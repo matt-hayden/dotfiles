@@ -37,7 +37,7 @@ URxvt.pointerBlank:		True
 URxvt.iconFile:			/usr/share/pixmaps/urxvt_48x48.xpm
 
 
-URxvt.perl-ext-common:		default,matcher,tabbed
+URxvt.perl-ext-common:		default,tabbed
 URxvt.url-launcher:		/usr/bin/xdg-open
 URxvt.matcher.button:		1
 ! Only internal color codes used here, no transparency
