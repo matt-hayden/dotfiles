@@ -80,7 +80,7 @@ then
 fi
 alias ta='touch -a'
 alias taa='tee -a'
-alias tail=head.bash
+alias tail=tail.bash
 if type tnef
 then
   alias winmail_dat=tnef
