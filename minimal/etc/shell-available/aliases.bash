@@ -62,6 +62,7 @@ alias mkpasswd="mkpasswd -m sha-256 -R 1000000"
 alias mkvmerge=mkvmerge.bash
 alias mount=mount.bash
 alias ncdu=ncdu.bash
+alias od='od -Ad'
 type play || alias play='canberra-gtk-play --file'
 alias psgrep='pgrep -a'
 alias ptmp='pushd $(mktemp -d)'
@@ -71,8 +72,9 @@ alias rm='rm -i'
 alias rsync=rsync.bash
 [[ -s ~/etc/russian.txt ]] && alias russian='cat -n ~/etc/russian.txt | grep -i'
 type say || function say() { text_to_speech.bash <<< "$@"; }
-function portnum { grep -hi "$@" /etc/services ~/etc/services; }
+[[ -s ~/etc/services ]] && function portnum { grep -hi "$@" /etc/services ~/etc/services; }
 alias shcheck='bash -n'
+alias sign='keybase sign -d'
 if type systemctl
 then
   for _c in start stop restart reload
@@ -89,7 +91,6 @@ then
 else
   alias winmail_dat='pkggrep tnef; echo'
 fi
-alias tree=tree.bash
 alias watch=watch.bash
 alias wget=wget.bash
 alias xtar='tar --exclude-caches --exclude-vcs --exclude-vcs-ignores'
