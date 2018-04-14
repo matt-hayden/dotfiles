@@ -1,3 +1,3 @@
 
-alias cc='gcc -gdwarf-2 -g3'
-alias cpp='g++ -gdwarf-2 -g3 -std=g++17'
+export CFLAGS='-gdwarf-2 -g3 -Wall -O0'
+export CXXFLAGS='-g3 -Wall -O0 -std=g++17'
