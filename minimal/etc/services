@@ -1,0 +1,42 @@
+# Network services, Internet style
+#
+
+silverlight		4502/tcp
+silverlight		4503/tcp
+silverlight		4504/tcp
+silverlight		4505/tcp
+silverlight		4506/tcp
+silverlight		4507/tcp
+silverlight		4508/tcp
+silverlight		4509/tcp
+silverlight		4510/tcp
+silverlight		4511/tcp
+silverlight		4512/tcp
+silverlight		4513/tcp
+silverlight		4514/tcp
+silverlight		4515/tcp
+silverlight		4516/tcp
+silverlight		4517/tcp
+silverlight		4518/tcp
+silverlight		4519/tcp
+silverlight		4520/tcp
+silverlight		4521/tcp
+silverlight		4522/tcp
+silverlight		4523/tcp
+silverlight		4524/tcp
+silverlight		4525/tcp
+silverlight		4526/tcp
+silverlight		4527/tcp
+silverlight		4528/tcp
+silverlight		4529/tcp
+silverlight		4530/tcp
+silverlight		4531/tcp
+silverlight		4532/tcp
+silverlight		4533/tcp
+silverlight		4534/tcp
+apple-push		5223/tcp
+google-messaging	5228/tcp
+apple-rtp		16384/udp
+apple-rtp		16385/udp
+apple-rtp		16386/udp
+google-voice		19302/udp

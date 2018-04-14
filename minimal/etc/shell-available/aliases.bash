@@ -12,7 +12,7 @@ fi
 alias dc=cd
 alias chmox='chmod +x'
 
-
+alias airodump-ng="$SUDO airodump-ng"
 alias argon2=argon2-cli
 if type dpkg
 then
@@ -58,6 +58,7 @@ alias head=head.bash
 alias ldgrep='ldconfig -p | grep'
 alias less=less.bash
 alias lineargs="xargs -d $'\n'"
+alias mkpasswd="mkpasswd -m sha-256 -R 1000000"
 alias mkvmerge=mkvmerge.bash
 alias mount=mount.bash
 alias ncdu=ncdu.bash
@@ -70,6 +71,7 @@ alias rm='rm -i'
 alias rsync=rsync.bash
 [[ -s ~/etc/russian.txt ]] && alias russian='cat -n ~/etc/russian.txt | grep -i'
 type say || function say() { text_to_speech.bash <<< "$@"; }
+function portnum { grep -hi "$@" /etc/services ~/etc/services; }
 alias shcheck='bash -n'
 if type systemctl
 then

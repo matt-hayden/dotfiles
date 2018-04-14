@@ -1,7 +1,6 @@
 
 #include "/keybase/public/matt_hayden/calendar"
 #include "/keybase/team/birthdays/calendar"
-#include "/keybase/team/birthdays.famous/calendar"
 
 #include "calendar.friends"
 
