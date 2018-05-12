@@ -12,3 +12,6 @@ spy=31557600		# seconds per year: there are 31.5 TB/yr at 1 MB/s
 
 gib=1073741824
 pi=3.141592653589793
+
+# ipfs chunk size
+chunk_size=1048562

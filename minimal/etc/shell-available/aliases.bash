@@ -36,7 +36,7 @@ then
   alias search='dnf search'
 fi
 alias envgrep='env | grep'
-alias ffmpeg=ffmpeg.bash
+type finger || alias finger=pinky
 alias fold='fold -s -w 72'
 if type gcloud
 then
